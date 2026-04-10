@@ -66,9 +66,19 @@ npm run dev:backend
 
 ### Smart Contract Development
 
-To build and test the Soroban contracts:
+To build and test the Soroban contracts, you need to navigate into each specific contract directory.
+
+**1. Build and test the Escrow Contract:**
 ```bash
-cd contracts
+cd contracts/escrow_contract
+cargo build --target wasm32v1-none --release
+cargo test
+```
+
+**2. Build and test the Dispute Registry Contract:**
+```bash
+# Go back to the root contracts folder, then into dispute_registry
+cd ../dispute_registry
 cargo build --target wasm32v1-none --release
 cargo test
 ```
