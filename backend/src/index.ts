@@ -13,6 +13,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Root Route
+app.get('/', (req: Request, res: Response) => {
+  res.send('Welcome to the GigVault API!');
+});
+
 // Health Check Route
 app.get('/api/health', (req: Request, res: Response) => {
   res.status(200).json({

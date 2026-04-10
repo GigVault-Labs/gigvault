@@ -69,7 +69,7 @@ npm run dev:backend
 To build and test the Soroban contracts:
 ```bash
 cd contracts
-cargo build --target wasm32-unknown-unknown --release
+cargo build --target wasm32v1-none --release
 cargo test
 ```
 
